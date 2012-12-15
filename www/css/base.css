@@ -1,0 +1,148 @@
+/* developed by michael ruddy 2012 */
+
+body {
+  margin: 0px 0px 0px 0px;
+  border: 0px none #000000;
+  padding: 0px 0px 0px 0px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Oswald', arial, sans-serif;
+  font-size: 10pt;
+  /* need for ie */
+  text-align: center;
+}
+
+img {
+  margin: 0px;
+  border: 0px solid #000000;
+  padding: 0px;
+  /* trick to keep extra padding out of the bottom of divs */
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.mainContainer {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  background-color: #000000;
+}
+
+.mainContainer, .header {
+  width: 1050px;
+}
+
+.fixedHeaderSpacer, .header {
+  height: 100px;
+}
+
+.mainArea {
+  /* need for ie */
+  text-align: center;
+}
+
+.footer {
+  padding: 5px;
+  /* for layouts that have floating elements just before the footer */
+  clear: both;
+}
+
+#photoSwitcher img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#photoSwitcher span {
+  margin: 7px;
+  font-size: 12pt;
+}
+
+#photoSwitcher span.active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#photoSwitcher .height-equalizer {
+  /* this just has to be taller than the tallest image to avoid jumping the controls around as the user mouses around */
+  height: 750px;
+}
+
+.infoArea {
+  background-color: #888888;
+  color: #ffffff;
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: left;
+  border: 4px solid #888888;
+  border-radius: 10px;
+  width: 95%;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoAreaHead {
+  padding: 5px;
+}
+
+.infoAreaHead > a {
+  background-color: #888888;
+  color: #ffffff;
+}
+
+.infoAreaBody {
+  background-color: #e0e0e0;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+.infoArea td.info {
+  width: 250px;
+}
+
+.infoArea tr.top-bottom-border {
+  border-top: 4px solid #888888;
+  border-bottom: 4px solid #888888;
+}
+
+.infoArea tr.bottom-border {
+  border-bottom: 4px solid #888888;
+}
+
+.infoArea th {
+  text-align: center;
+  font-size: 12pt;
+  color: #000000;
+}
+
+.infoArea td {
+  vertical-align: top;
+  text-align: left;
+  padding: 5px;
+  font-size: 10pt;
+  color: #000000;
+}
+
+div.desc {
+  color: #000000;
+  font-size: 12pt;
+  white-space: pre-line;
+}
