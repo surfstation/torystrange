@@ -146,3 +146,10 @@ div.desc {
   font-size: 12pt;
   white-space: pre-line;
 }
+
+.policy {
+  text-align: left;
+  font-size: 10pt;
+  color: #000000;
+  padding: 5px;
+}

@@ -8,17 +8,19 @@
   <link rel="stylesheet" href="css/base.css?v=20121212" media="all">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" type="text/css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<!--  <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-20128098-1']);
-    _gaq.push(['_trackPageview']);
+  <script>
+    if ((document.location.protocol !== "file:") && (document.location.hostname !== "") && (document.location.hostname !== "localhost")) {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37076804-1']);
+      _gaq.push(['_trackPageview']);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script> -->
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
   <link rel="shortcut icon" href="favicon.ico?v=20121212">
 </head>
 <body>
@@ -55,7 +57,7 @@
       </div>
     </div>
     <div class="footer">
-      <span>&copy; 2012 Tory Strange Photography - <a href="contact.html">Contact</a></span>
+      <span>&copy; 2012 Tory Strange Photography - <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy | <a href="faq.html">FAQ</a></span>
     </div>
   </div>
 </body>
