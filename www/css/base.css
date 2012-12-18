@@ -142,9 +142,17 @@ table {
 }
 
 div.desc {
+  text-align: left;
+  padding: 5px;
   color: #000000;
   font-size: 12pt;
   white-space: pre-line;
+}
+
+div.desc a {
+  color: #000000;
+  background-color: #e0e0e0;
+  text-decoration: underline;
 }
 
 .policy {
