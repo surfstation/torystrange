@@ -161,7 +161,7 @@ table {
   color: #000000;
 }
 
-div.desc {
+div.desc, .faq {
   text-align: left;
   padding: 5px;
   color: #000000;
@@ -169,10 +169,14 @@ div.desc {
   white-space: pre-line;
 }
 
-div.desc a {
+div.desc a, .faq a {
   color: #000000;
   background-color: #e0e0e0;
   text-decoration: underline;
+}
+
+.faq {
+  white-space: normal;
 }
 
 .policy {
