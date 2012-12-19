@@ -169,7 +169,7 @@ div.desc, .faq {
   white-space: pre-line;
 }
 
-div.desc a, .faq a {
+div.desc a, .faq a, .contact a {
   color: #000000;
   background-color: #e0e0e0;
   text-decoration: underline;
@@ -177,6 +177,12 @@ div.desc a, .faq a {
 
 .faq {
   white-space: normal;
+}
+.contact {
+  text-align: center;
+  padding: 5px;
+  color: #000000;
+  font-size: 12pt;
 }
 
 .policy {
