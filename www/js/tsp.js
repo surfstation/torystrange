@@ -36,19 +36,27 @@ ToryStrangePhotography.ImageSwitcher.prototype.setup = function() {
     temp.push('<span>' + (i + 1) + '</span>');
   }
   temp[this.currentIndex] = '<span class="active">' + (this.currentIndex + 1) + '</span>';
-  this.$selectorDiv = jQuery('div.switcher-ui', this.$photoSwitcher);
-  this.$selectorDiv.html(temp.join(''));
+  this.$switcherItems = jQuery('.switcher-items', this.$photoSwitcher);
+  this.$switcherItems.html(temp.join(''));
   var me = this;
-  this.$spans = jQuery('span', this.$photoSwitcher);
-  this.$spans.mouseenter(function () {
+  this.$spans = jQuery('span', this.$switcherItems);
+  this.$spans.click(function () {
     var $this = jQuery(this);
     if (!$this.hasClass('active')) {
       me.switchPhoto($this.index());
     }
   });
-  this.$image = jQuery('img', this.$photoSwitcher);
+  this.$image = jQuery('img.switcher-image', this.$photoSwitcher);
   this.$link = jQuery('a', this.$photoSwitcher);
-  this.valid = this.valid && (this.$selectorDiv.length === 1) && (this.$spans.length > 0) && (this.$image.length === 1) && (this.$link.length === 1);
+  this.$goleft = jQuery('img.goleft', this.$photoSwitcher);
+  this.$goright = jQuery('img.goright', this.$photoSwitcher);
+  this.$goleft.click(function() {
+    me.switchPhoto("left");
+  });
+  this.$goright.click(function() {
+    me.switchPhoto("right");
+  });
+  this.valid = this.valid && (this.$switcherItems.length === 1) && (this.$spans.length > 0) && (this.$image.length === 1) && (this.$link.length === 1);
   this.preloadImages();
 };
 
@@ -72,7 +80,16 @@ ToryStrangePhotography.ImageSwitcher.prototype.switchPhoto = function(switchToIn
     if (("number" === typeof switchToIndex) && (switchToIndex >= 0) && (switchToIndex < this.photos.length)) {
       this.currentIndex = switchToIndex;
     } else {
-      return; // got bogus input
+      if(("string" === typeof switchToIndex) && (("left" === switchToIndex) || ("right" === switchToIndex))) {
+        if ("left" === switchToIndex) {
+          this.currentIndex = ((this.currentIndex - 1) >= 0) ? this.currentIndex - 1 : this.photos.length - 1;
+        }
+        if ("right" === switchToIndex) {
+          this.currentIndex = (this.currentIndex + 1) % this.photos.length;
+        }
+      } else {
+        return; // got bogus input
+      }
     }
   }
   var me = this;

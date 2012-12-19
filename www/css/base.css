@@ -68,7 +68,7 @@ a {
   color: #333333;
 }
 
-#photoSwitcher img {
+#photoSwitcher .switcher-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -84,9 +84,18 @@ a {
   color: #000000;
 }
 
+#photoSwitcher .switcher-items span {
+  cursor: pointer;
+}
+
 #photoSwitcher .height-equalizer {
   /* this just has to be taller than the tallest image to avoid jumping the controls around as the user mouses around */
   height: 750px;
+}
+
+#photoSwitcher .switcher-ui img {
+  display: inline;
+  cursor: pointer;
 }
 
 .infoArea {
