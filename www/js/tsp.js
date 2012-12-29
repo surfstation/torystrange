@@ -50,11 +50,27 @@ ToryStrangePhotography.ImageSwitcher.prototype.setup = function() {
   this.$link = jQuery('a', this.$photoSwitcher);
   this.$goleft = jQuery('img.goleft', this.$photoSwitcher);
   this.$goright = jQuery('img.goright', this.$photoSwitcher);
+  this.$play = jQuery('img.play', this.$photoSwitcher);
+  this.$pause = jQuery('img.pause', this.$photoSwitcher);
   this.$goleft.click(function() {
     me.switchPhoto("left");
   });
   this.$goright.click(function() {
     me.switchPhoto("right");
+  });
+  this.$play.click(function() {
+    if (me.$play && me.$pause) {
+      me.$play.hide();
+      me.$pause.show();
+    }
+    me.start();
+  });
+  this.$pause.click(function() {
+    me.stop();
+    if (me.$play && me.$pause) {
+      me.$play.show();
+      me.$pause.hide();
+    }
   });
   this.valid = this.valid && (this.$switcherItems.length === 1) && (this.$spans.length > 0) && (this.$image.length === 1) && (this.$link.length === 1);
   this.preloadImages();
@@ -98,7 +114,7 @@ ToryStrangePhotography.ImageSwitcher.prototype.switchPhoto = function(switchToIn
     me.$link.attr('href', photo.link);
     me.$spans.removeClass("active").eq(me.currentIndex).addClass("active");
     me.$image.attr('src', photo.bigurl).attr('title', photo.title).fadeTo("slow", 1);
-    me.timerHandle = setTimeout(function() { me.switchPhoto(); }, me.sleepTime);
+    me.start();
   });
 };
 
@@ -106,8 +122,13 @@ ToryStrangePhotography.ImageSwitcher.prototype.start = function() {
   if (!this.valid) {
     return;
   }
+  if (this.timerHandle) { // handle case where play button is clicked even though the switcher is already going
+    return;
+  }
   var me = this;
-  me.timerHandle = setTimeout(function() { me.switchPhoto(); }, me.sleepTime);
+  if (!me.$play || !me.$pause || ('none' !== me.$pause.css('display'))) {
+    me.timerHandle = setTimeout(function() { me.switchPhoto(); }, me.sleepTime);
+  }
 };
 
 ToryStrangePhotography.ImageSwitcher.prototype.stop = function() {

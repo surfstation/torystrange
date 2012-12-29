@@ -102,6 +102,10 @@ ul {
   cursor: pointer;
 }
 
+#photoSwitcher img.play {
+  display: none;
+}
+
 .infoArea {
   background-color: #888888;
   color: #ffffff;
