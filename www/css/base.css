@@ -26,6 +26,10 @@ a {
   color: #ffffff;
 }
 
+ul {
+  margin: 0px;
+}
+
 .mainContainer {
   text-align: left;
   margin-left: auto;
@@ -126,6 +130,7 @@ a {
   background-color: #e0e0e0;
   text-align: center;
   padding: 5px 0px 5px 0px;
+  font-family: arial, sans-serif;
 }
 
 table {
@@ -161,33 +166,27 @@ table {
   color: #000000;
 }
 
-div.desc, .faq {
+div.desc, .faq, .policy {
   text-align: left;
   padding: 5px;
   color: #000000;
   font-size: 12pt;
-  white-space: pre-line;
 }
 
-div.desc a, .faq a, .contact a {
-  color: #000000;
-  background-color: #e0e0e0;
-  text-decoration: underline;
+div.desc {
+  margin: 10px 100px 10px 100px;
+}
+
+.policy {
+  margin: 10px 10px 10px 10px;
 }
 
 .faq {
   white-space: normal;
 }
-.contact {
-  text-align: center;
-  padding: 5px;
-  color: #000000;
-  font-size: 12pt;
-}
 
-.policy {
-  text-align: left;
-  font-size: 10pt;
+div.desc a, .faq a {
   color: #000000;
-  padding: 5px;
+  background-color: #e0e0e0;
+  text-decoration: underline;
 }
