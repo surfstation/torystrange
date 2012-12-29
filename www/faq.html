@@ -32,8 +32,9 @@
         <a href="index.html"><img src="images/logo.png?v=20121212" title="Tory Strange Photography"></a>
         <img src="images/menu.png?v=20121212" usemap="#menuMap" title="">
         <map name="menuMap">
-          <area shape="rect" coords="0,0,230,50" href="the-work.html">
-          <area shape="rect" coords="231,0,400,50" href="about.html">
+          <area shape="rect" coords="0,0,189,50" href="the-work.html" title="The Work">
+          <area shape="rect" coords="190,0,337,50" href="about.html" title="About">
+          <area shape="rect" coords="338,0,550,50" href="#" title="View Shopping Cart" id="viewCartLink">
         </map>
       </div>
     </div>
@@ -89,9 +90,24 @@
                       <li>Prints can be purchased online, via our PayPal shopping cart, or in person at The Surf Station and/or The Girl Next Door Surf Shop. For more information about the shops, please see the <a href="contact.html">contact</a> page.</li>
                     </ul>
                   </li>
+                  <li>What online payment methods do you accept?
+                    <ul>
+                      <li>We accept orders via a PayPal shopping cart. You can pay with any available PayPal funding source. For example, you can finish the PayPal payment using your credit card, PayPal balance, or even via bank transfer.</li>
+                    </ul>
+                  </li>
                   <li>What is The Surf Station? What is The Girl Next Door Surf Shop?
                     <ul>
                       <li><a href="http://www.surf-station.com/" target="_blank">The Surf Station</a> is the surf shop that Tory started in 1984. The Surf Station is one of the most well-known surf shops on the east coast of the United States and is dedicated to delighting its customers. The Girl Next Door Surf Shop is the surf shop dedicated to serving the needs of female surfers, and is right next door to The Surf Station's original store. Tory Strange Photography fine art prints are available for in-person viewing and purchase at the shops.</li>
+                    </ul>
+                  </li>
+                  <li>Why do the shopping cart and checkout pages display "The Surf station"?
+                    <ul>
+                      <li>We are using The Surf Station's existing order fulfillment infrastructure. Please rest assured that your order is going to the correct place.</li>
+                    </ul>
+                  </li>
+                  <li>When I purchase online, how will the transaction appear on my statement?
+                    <ul>
+                      <li>Depending on the payment source you selected during checkout, the transaction will appear on your statement as "SURFSTATION" or "PAYPAL*SURFSTATION".</li>
                     </ul>
                   </li>
                 </ul>
@@ -100,7 +116,7 @@
                 <ul>
                   <li>How much does packing/handling and shipping cost?
                     <ul>
-                      <li>We are offering free freight for the month of January 2013. Please <a href="contact.html">contact</a> us for details!</li>
+                      <li>We are offering free freight for shipments going to locations within the continental United States during the month of January 2013. Please <a href="contact.html">contact</a> us for further details. Some exclusions may apply.</li>
                     </ul>
                   </li>
                   <li>How will my order be shipped?
@@ -120,5 +136,32 @@
       <div><span class="copyright">&copy; 2012 Tory Strange Photography</span></div>
     </div>
   </div>
+  <form id="viewCartForm" target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="business" value="J9QBN5B4KC3CN">
+    <input type="hidden" name="display" value="1">
+    <input type="hidden" name="shopping_url" value="http://www.torystrange.com/">
+  </form>
+  <script>
+    $(function() {
+      $('#viewCartLink').click(function(event) {
+        if (window.viewCartForm) {
+          event.preventDefault();
+          event.stopPropagation();
+          if ((document.location.protocol !== "file:") && (document.location.hostname !== "") && (document.location.hostname !== "localhost")) {
+            window.viewCartForm.shopping_url.value = window.location.href;
+          }
+          window.viewCartForm.submit();
+        }
+      });
+      $('#addToCartLink').click(function(event) {
+        if (window.addToCartForm) {
+          event.preventDefault();
+          event.stopPropagation();
+          window.addToCartForm.submit();
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -32,8 +32,9 @@
         <a href="index.html"><img src="images/logo.png?v=20121212" title="Tory Strange Photography"></a>
         <img src="images/menu.png?v=20121212" usemap="#menuMap" title="">
         <map name="menuMap">
-          <area shape="rect" coords="0,0,230,50" href="the-work.html">
-          <area shape="rect" coords="231,0,400,50" href="about.html">
+          <area shape="rect" coords="0,0,189,50" href="the-work.html" title="The Work">
+          <area shape="rect" coords="190,0,337,50" href="about.html" title="About">
+          <area shape="rect" coords="338,0,550,50" href="#" title="View Shopping Cart" id="viewCartLink">
         </map>
       </div>
     </div>
@@ -74,5 +75,32 @@
       <div><span class="copyright">&copy; 2012 Tory Strange Photography</span></div>
     </div>
   </div>
+  <form id="viewCartForm" target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="business" value="J9QBN5B4KC3CN">
+    <input type="hidden" name="display" value="1">
+    <input type="hidden" name="shopping_url" value="http://www.torystrange.com/">
+  </form>
+  <script>
+    $(function() {
+      $('#viewCartLink').click(function(event) {
+        if (window.viewCartForm) {
+          event.preventDefault();
+          event.stopPropagation();
+          if ((document.location.protocol !== "file:") && (document.location.hostname !== "") && (document.location.hostname !== "localhost")) {
+            window.viewCartForm.shopping_url.value = window.location.href;
+          }
+          window.viewCartForm.submit();
+        }
+      });
+      $('#addToCartLink').click(function(event) {
+        if (window.addToCartForm) {
+          event.preventDefault();
+          event.stopPropagation();
+          window.addToCartForm.submit();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
