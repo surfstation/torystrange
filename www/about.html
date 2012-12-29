@@ -61,20 +61,20 @@
   <script>
     $(function() {
       $('#viewCartLink').click(function(event) {
-        if (window.viewCartForm) {
-          event.preventDefault();
-          event.stopPropagation();
+        event.preventDefault();
+        event.stopPropagation();
+        if (viewCartForm) {
           if ((document.location.protocol !== "file:") && (document.location.hostname !== "") && (document.location.hostname !== "localhost")) {
-            window.viewCartForm.shopping_url.value = window.location.href;
+            viewCartForm.shopping_url.value = window.location.href;
           }
-          window.viewCartForm.submit();
+          viewCartForm.submit();
         }
       });
       $('#addToCartLink').click(function(event) {
-        if (window.addToCartForm) {
-          event.preventDefault();
-          event.stopPropagation();
-          window.addToCartForm.submit();
+        event.preventDefault();
+        event.stopPropagation();
+        if (addToCartForm) {
+          addToCartForm.submit();
         }
       });
     });

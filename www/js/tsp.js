@@ -140,73 +140,73 @@ ToryStrangePhotography.ImageSwitcher.prototype.stop = function() {
 
 ToryStrangePhotography.photos = [
   {
-    'bigurl': 'images/x1000/light-offshore.png?v=20121212',
+    'bigurl': 'images/x1000/light-offshore.png?v=20121229',
     'title': 'Light Offshore by Tory Strange',
     'category': 'Sunrise',
     'link': 'light-offshore.html'
   },
   {
-    'bigurl': 'images/x1000/pier-into-the-distance.png?v=20121212',
+    'bigurl': 'images/x1000/pier-into-the-distance.png?v=20121229',
     'title': 'Pier Into The Distance by Tory Strange',
     'category': 'Pier',
     'link': 'pier-into-the-distance.html'
   },
   {
-    'bigurl': 'images/x1000/pier-sunrise.png?v=20121212',
+    'bigurl': 'images/x1000/pier-sunrise.png?v=20121229',
     'title': 'Pier Sunrise by Tory Strange',
     'category': 'Pier',
     'link': 'pier-sunrise.html'
   },
   {
-    'bigurl': 'images/x1000/lazy-day.png?v=20121212',
+    'bigurl': 'images/x1000/lazy-day.png?v=20121229',
     'title': 'Lazy Day by Tory Strange',
     'category': 'Pier',
     'link': 'lazy-day.html'
   },
   {
-    'bigurl': 'images/x1000/summer-swell.png?v=20121212',
+    'bigurl': 'images/x1000/summer-swell.png?v=20121229',
     'title': 'Summer Swell by Tory Strange',
     'category': 'Surf',
     'link': 'summer-swell.html'
   },
   {
-    'bigurl': 'images/x1000/cloud-bed.png?v=20121212',
+    'bigurl': 'images/x1000/cloud-bed.png?v=20121229',
     'title': 'Cloud Bed by Tory Strange',
     'category': 'Sunrise',
     'link': 'cloud-bed.html'
   },
   {
-    'bigurl': 'images/x1000/tri-piling.png?v=20121212',
+    'bigurl': 'images/x1000/tri-piling.png?v=20121229',
     'title': 'Tri-Piling by Tory Strange',
     'category': 'Pier',
     'link': 'tri-piling.html'
   },
   {
-    'bigurl': 'images/x1000/morning-ray.png?v=20121212',
+    'bigurl': 'images/x1000/morning-ray.png?v=20121229',
     'title': 'Morning Ray by Tory Strange',
     'category': 'Sunrise',
     'link': 'morning-ray.html'
   },
   {
-    'bigurl': 'images/x1000/sky-alive.png?v=20121212',
+    'bigurl': 'images/x1000/sky-alive.png?v=20121229',
     'title': 'Sky Alive by Tory Strange',
     'category': 'Sunrise',
     'link': 'sky-alive.html'
   },
   {
-    'bigurl': 'images/x1000/dawn-patrol.png?v=20121212',
+    'bigurl': 'images/x1000/dawn-patrol.png?v=20121229',
     'title': 'Dawn Patrol by Tory Strange',
     'category': 'Surf',
     'link': 'dawn-patrol.html'
   },
   {
-    'bigurl': 'images/x1000/morning-oats.png?v=20121212',
+    'bigurl': 'images/x1000/morning-oats.png?v=20121229',
     'title': 'Morning Oats by Tory Strange',
     'category': 'Beach',
     'link': 'morning-oats.html'
   },
   {
-    'bigurl': 'images/x1000/shiny-shoal.png?v=20121212',
+    'bigurl': 'images/x1000/shiny-shoal.png?v=20121229',
     'title': 'Shiny Shoal by Tory Strange',
     'category': 'Beach',
     'link': 'shiny-shoal.html'
