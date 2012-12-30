@@ -8,7 +8,7 @@ body {
   color: #ffffff;
   font-family: 'Oswald', arial, sans-serif;
   font-size: 10pt;
-  /* need for ie */
+  /* needed for ie quirks mode */
   text-align: center;
 }
 
@@ -34,20 +34,8 @@ ul {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-}
-
-.header {
-  position: fixed;
-  top: 0px;
-  background-color: #000000;
-}
-
-.mainContainer, .header {
+  /* use this width because the largest content area images are 1000px wide */
   width: 1050px;
-}
-
-.fixedHeaderSpacer, .header {
-  height: 100px;
 }
 
 .mainArea {
@@ -125,7 +113,7 @@ ul {
   padding: 5px;
 }
 
-.infoAreaHead > a {
+.infoAreaHead a {
   background-color: #888888;
   color: #ffffff;
 }

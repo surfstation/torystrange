@@ -5,15 +5,16 @@
   <meta charset="ISO-8859-1">
   <meta name="description" content="Tory Strange Photography - Fine Art, Photographic Prints, Surf Photos, Beach Photos, Sunrise Photos, Pier Photos, The Surf Station, St. Augustine Beach, FL 32080">
   <title>Tory Strange Photography - Fine Art, Photographic Prints, Surf Photos, Beach Photos, Sunrise Photos, Pier Photos, The Surf Station, St. Augustine Beach, FL 32080</title>
-  <link rel="stylesheet" href="css/base.css?v=20121229" media="all">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" type="text/css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/base.css?v=20121230" media="all">
+  <link rel="shortcut icon" href="favicon.ico?v=20121230">
+  <link rel="apple-touch-icon" href="images/mobile-icon.png?v=20121230">
+  <link rel="apple-touch-icon-precomposed" href="images/mobile-icon.png?v=20121230">
   <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37076804-1']);
+    _gaq.push(['_trackPageview']);
     if ((document.location.protocol !== "file:") && (document.location.hostname !== "") && (document.location.hostname !== "localhost")) {
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-37076804-1']);
-      _gaq.push(['_trackPageview']);
-
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -21,22 +22,14 @@
       })();
     }
   </script>
-  <link rel="shortcut icon" href="favicon.ico?v=20121229">
-  <link rel="apple-touch-icon" href="images/mobileicon.png?v=20121229">
-  <link rel="apple-touch-icon-precomposed" href="images/mobileicon.png?v=20121229">
 </head>
 <body>
   <div class="mainContainer">
-    <div class="fixedHeaderSpacer">
-      <div class="header">
-        <a href="index.html"><img src="images/logo.png?v=20121229" title="Tory Strange Photography"></a>
-        <img src="images/menu.png?v=20121229" usemap="#menuMap" title="">
-        <map name="menuMap">
-          <area shape="rect" coords="0,0,189,50" href="the-work.html" title="The Work">
-          <area shape="rect" coords="190,0,337,50" href="about.html" title="About">
-          <area shape="rect" coords="338,0,550,50" href="#" title="View Shopping Cart" id="viewCartLink">
-        </map>
-      </div>
+    <div class="header">
+      <a href="index.html"><img src="images/logo.png?v=20121230" title="Tory Strange Photography"></a>
+      <a href="the-work.html"><img src="images/the-work.png?v=20121230" title="The Work"></a>
+      <a href="about.html"><img src="images/about.png?v=20121230" title="About"></a>
+      <a href="#" class="viewCart"><img src="images/view-cart.png?v=20121230" title="View Shopping Cart"></a>
     </div>
     <div class="mainArea">
       <div class="infoArea">
@@ -55,7 +48,7 @@
                 </table>
               </td>
               <td>
-                <img src="images/x500/shiny-shoal.png?v=20121229" title="Shiny Shoal by Tory Strange">
+                <img src="images/x500/shiny-shoal.png?v=20121230" title="Shiny Shoal by Tory Strange">
               </td>
             </tr>
           </table>
@@ -67,32 +60,13 @@
       <div><span class="copyright">&copy; 2012 Tory Strange Photography</span></div>
     </div>
   </div>
-  <form id="viewCartForm" target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+  <script src="js/jquery-1.8.3.min.js?v=20121230"></script>
+  <script src="js/tsp.js?v=20121230"></script>
+  <form name="viewCartForm" target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
     <input type="hidden" name="cmd" value="_cart">
     <input type="hidden" name="business" value="payments@torystrange.com">
     <input type="hidden" name="display" value="1">
     <input type="hidden" name="shopping_url" value="http://www.torystrange.com/">
   </form>
-  <script>
-    $(function() {
-      $('#viewCartLink').click(function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        if (viewCartForm) {
-          if ((document.location.protocol !== "file:") && (document.location.hostname !== "") && (document.location.hostname !== "localhost")) {
-            viewCartForm.shopping_url.value = window.location.href;
-          }
-          viewCartForm.submit();
-        }
-      });
-      $('#addToCartLink').click(function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        if (addToCartForm) {
-          addToCartForm.submit();
-        }
-      });
-    });
-  </script>
 </body>
 </html>
