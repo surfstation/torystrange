@@ -185,10 +185,6 @@ div.desc {
   margin: 10px 10px 10px 10px;
 }
 
-.faq {
-  white-space: normal;
-}
-
 div.desc a, .faq a {
   color: #000000;
   background-color: #e0e0e0;
