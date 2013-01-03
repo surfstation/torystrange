@@ -178,3 +178,10 @@ div.desc a, .faq a {
   background-color: #e0e0e0;
   text-decoration: underline;
 }
+
+a.moreinfo {
+  font-size: 8pt;
+  color: #000000;
+  background-color: #e0e0e0;
+  text-decoration: underline;
+}
